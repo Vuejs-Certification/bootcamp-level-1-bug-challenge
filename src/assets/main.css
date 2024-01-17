@@ -1,0 +1,126 @@
+/*You do not need to change anything in this file*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  @apply bg-gray-100 h-full;
+}
+#app {
+  @apply flex justify-center h-full w-full bg-gray-100 pt-32;
+}
+
+.container {
+  @apply px-4 py-8 bg-white shadow-lg rounded-lg overflow-hidden min-w-[320px];
+}
+
+.container h1 {
+  @apply text-2xl font-bold mb-4 text-[#333] flex justify-between items-center;
+}
+
+.container h1 svg {
+  @apply w-5 h-5 cursor-pointer;
+}
+
+.container h1 svg:hover {
+  @apply opacity-80;
+}
+
+.container ul {
+  @apply mt-6;
+}
+
+.container li {
+  @apply border-b py-2 flex items-center justify-between;
+}
+
+.container li div {
+  @apply flex gap-1;
+}
+
+.container li svg {
+  @apply w-4 h-4 cursor-pointer;
+}
+
+.container li svg:hover {
+  @apply opacity-80;
+}
+
+.container li span {
+  @apply cursor-pointer px-2;
+}
+
+.note-modal {
+  @apply fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-50;
+}
+
+.note-modal-overlay {
+  @apply absolute inset-0 bg-gray-600 opacity-50;
+}
+
+.note-modal-container {
+  @apply bg-white w-96 mx-auto rounded shadow-lg z-10;
+}
+
+.note-modal-content {
+  @apply py-4 px-6;
+}
+
+.note-modal-content h3 {
+  @apply font-bold text-lg mb-4;
+}
+
+.note-modal-content form > div {
+  @apply mb-4;
+}
+
+.note-modal-content label {
+  @apply label;
+}
+
+.note-modal-content input {
+  @apply w-full input input-bordered;
+}
+
+.note-modal-content textarea {
+  @apply w-full textarea textarea-bordered;
+}
+
+.note-modal-content .btns {
+  @apply flex justify-end;
+}
+
+.note-modal-content .btns .save {
+  @apply btn btn-sm btn-primary;
+}
+
+.note-modal-content .btns .cancel {
+  @apply btn btn-sm btn-outline btn-secondary ml-2;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-overlay {
+  z-index: -1;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s;
+}
+
+.slide-enter-from {
+  transform: translateX(-100%);
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
+}
